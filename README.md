@@ -19,3 +19,20 @@
         cluster-migration-barrier 1
         appendonly yes
         protected-mode no
+### Create redis-cluster service ###
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: redis-cluster
+      namespace: beta
+    spec:
+      type: ClusterIP
+      ports:
+      - port: 6379
+        targetPort: 6379
+        name: client
+      - port: 16379
+        targetPort: 16379
+        name: gossip
+      selector:
+        app: redis-cluster
