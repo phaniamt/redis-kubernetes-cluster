@@ -1,4 +1,11 @@
 # redis-kubernetes-cluster
+### Reference urls ###
+https://rancher.com/blog/2019/deploying-redis-cluster/
+
+https://github.com/Tiroshan/kubernetes-redis-cluster/tree/master/kubertenes
+
+https://medium.com/zero-to/setup-persistence-redis-cluster-in-kubertenes-7d5b7ffdbd98
+
 ### Create redis config ###
     apiVersion: v1
     kind: ConfigMap
