@@ -115,3 +115,5 @@ https://medium.com/zero-to/setup-persistence-redis-cluster-in-kubertenes-7d5b7ff
               storage: 10Gi
 ### Create redis cluster ###
     kubectl exec -it redis-cluster-0 -- redis-cli --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
+### Cluster info ###
+    kubectl exec -it redis-cluster-0 -- redis-cli cluster info
